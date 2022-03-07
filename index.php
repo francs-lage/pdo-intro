@@ -1,3 +1,5 @@
+
+<?php include_once("home.html"); ?>
 <?php 
     $city = filter_input(INPUT_GET, "city", FILTER_SANITIZE_STRING);
 
