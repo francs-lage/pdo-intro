@@ -1,6 +1,5 @@
 
-<?php include_once("home.html"); ?>
-<?php /*
+<?php 
     $city = filter_input(INPUT_GET, "city", FILTER_SANITIZE_STRING);
 
     include_once "config/Database.php"; 
@@ -14,7 +13,7 @@
         //$statement->debugDumpParams();
         $results = $statement->fetchAll(PDO::FETCH_ASSOC);
         $statement->closeCursor();
-    } */
+    } 
     
 ?>
 <!DOCTYPE html>
