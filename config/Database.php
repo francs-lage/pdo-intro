@@ -1,8 +1,14 @@
 <?php 
-    $host = 's29oj5odr85rij2o.cbetxkdyhwsb.us-east-1.rds.amazonaws.com';
-    $db_name = 'saue4p4vl4n7s6v2';
-    $username = 'cicnlgrlezlr3gvu';
-    $password = 'niar77j0vassnkzj';
+
+$url = getenv('JAWSDB_URL');
+$dbparts = parse_url($url);
+
+$host = $dbparts['host'];
+$db_name = ltrim($dbparts['path'], '/');
+$username = $dbparts['user'];
+$password = $dbparts['pass'];
+
+
 
     try {
         $db = new PDO("mysql:host={$host};dbname={$db_name}", $username, $password);
